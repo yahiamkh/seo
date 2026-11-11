@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Teoría musical para principiantes | Música desde cero</title>
+    <meta
+      name="description"
+      content="Empieza a aprender teoría musical: descubre las notas musicales,
+    el pentagrama, las figuras y sus valores con explicaciones sencillas."
+    />
+
+    <style>
+      :root {
+        --background: #f5f3ef;
+        --surface: #ffffff;
+        --text: #26302b;
+        --muted: #526057;
+        --accent: #285943;
+        --border: #d9e0da;
+        --note: #edf4ee;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 1rem;
+      }
+
+      body {
+        margin: 0;
+        background: var(--background);
+        color: var(--text);
+        font-family: Arial, sans-serif;
+        line-height: 1.7;
+      }
+
+      a {
+        color: var(--accent);
+        text-underline-offset: 0.2em;
+      }
+
+      a:focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 4px;
+      }
+
+      .skip-link {
+        position: absolute;
+        top: -100px;
+        left: 1rem;
+        padding: 0.7rem;
+        background: white;
+        z-index: 10;
+      }
+
+      .skip-link:focus {
+        top: 1rem;
+      }
+
+      header {
+        padding: 3.5rem 1.25rem;
+        background: var(--accent);
+        color: white;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0 0 0.8rem;
+        font-size: clamp(2rem, 6vw, 3.2rem);
+        line-height: 1.2;
+      }
+
+      header p {
+        max-width: 650px;
+        margin: auto;
+      }
+
+      nav {
+        padding: 1rem;
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+      }
+
+      nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem 1.5rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      nav a {
+        font-weight: bold;
+      }
+
+      main {
+        max-width: 960px;
+        margin: auto;
+        padding: 2rem 1rem;
+      }
+
+      section {
+        margin-bottom: 1.5rem;
+        padding: clamp(1.2rem, 4vw, 2rem);
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+      }
+
+      h2,
+      h3 {
+        line-height: 1.3;
+        color: var(--accent);
+      }
+
+      h2 {
+        margin-top: 0;
+      }
+
+      aside {
+        margin-top: 1.5rem;
+        padding: 1rem 1.25rem;
+        background: var(--note);
+        border-left: 4px solid var(--accent);
+      }
+
+      aside h3 {
+        margin-top: 0;
+      }
+
+      aside p:last-child {
+        margin-bottom: 0;
+      }
+
+      .notes {
+        padding: 1rem;
+        background: var(--note);
+        border-radius: 8px;
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: bold;
+        word-spacing: 0.5rem;
+      }
+
+      .table-wrapper {
+        overflow-x: auto;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+
+      caption {
+        margin-bottom: 0.75rem;
+        text-align: left;
+        color: var(--muted);
+      }
+
+      th,
+      td {
+        padding: 0.8rem;
+        border: 1px solid var(--border);
+        text-align: left;
+      }
+
+      figure {
+        margin: 1.5rem 0;
+      }
+
+      figure img {
+        display: block;
+        width: 100%;
+        max-width: 650px;
+        height: auto;
+        margin: auto;
+      }
+
+      figcaption {
+        margin-top: 0.75rem;
+        font-size: 0.9rem;
+        text-align: center;
+        color: var(--muted);
+      }
+
+      thead {
+        background: var(--note);
+      }
+
+      footer {
+        padding: 2rem 1rem;
+        text-align: center;
+        color: var(--muted);
+      }
+
+      .youtube-video {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border: 0;
+        border-radius: 8px;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header>
+      <h1>Teoría musical para principiantes</h1>
+      <p>
+        Música desde cero: una primera guía para entender las notas, el
+        pentagrama y el ritmo.
+      </p>
+    </header>
+
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="#introduccion">Teoría musical</a></li>
+        <li><a href="#notas">Notas y pentagrama</a></li>
+        <li><a href="#figuras">Figuras y silencios</a></li>
+      </ul>
+    </nav>
+
+    <main id="contenido">
+      <section id="introduccion" aria-labelledby="titulo-introduccion">
+        <h2 id="titulo-introduccion">¿Qué es la teoría musical?</h2>
+
+        <p>
+          La teoría musical nos ayuda a comprender cómo se organiza la música.
+          Para empezar, podemos aprender a reconocer las notas y entender cómo
+          se representa la duración de los sonidos.
+        </p>
+
+        <p>
+          Si quieres aprender teoría musical desde cero, aquí encontrarás una
+          introducción a las notas musicales en el pentagrama, las figuras y los
+          silencios. No necesitas conocimientos previos: iremos paso a paso.
+        </p>
+
+        <h3>¿Por dónde empezar?</h3>
+
+        <ol>
+          <li>Conoce los nombres de las notas.</li>
+          <li>Observa cómo se colocan en el pentagrama.</li>
+          <li>Compara las figuras musicales y sus valores.</li>
+          <li>Practica contando una pulsación regular.</li>
+        </ol>
+
+        <aside aria-labelledby="consejo-inicio">
+          <h3 id="consejo-inicio">Un consejo para empezar</h3>
+          <p>
+            No intentes memorizar todo de una vez. Lee un apartado, revisa el
+            ejemplo y comprueba qué has entendido antes de continuar.
+          </p>
+        </aside>
+      </section>
+
+      <section id="notas" aria-labelledby="titulo-notas">
+        <h2 id="titulo-notas">Notas musicales en el pentagrama</h2>
+
+        <p>Los siete nombres básicos de las notas musicales son:</p>
+
+        <p class="notes">Do · Re · Mi · Fa · Sol · La · Si</p>
+
+        <p>
+          Después de si, la secuencia vuelve a empezar en do, en un registro más
+          agudo. También podemos recorrerla en sentido contrario, hacia sonidos
+          más graves.
+        </p>
+
+        <h3>¿Qué es el pentagrama?</h3>
+
+        <p>
+          El pentagrama está formado por cinco líneas y cuatro espacios. Las
+          notas se escriben sobre las líneas o en los espacios. Tanto las líneas
+          como los espacios se cuentan de abajo arriba.
+        </p>
+
+        <p>
+          La clave indica qué nota corresponde a cada posición. En clave de sol
+          en segunda línea, esa segunda línea corresponde a la nota sol.
+        </p>
+
+        <h3>Ejemplo en clave de sol</h3>
+
+        <ul>
+          <li>Líneas, de abajo arriba: mi, sol, si, re y fa.</li>
+          <li>Espacios, de abajo arriba: fa, la, do y mi.</li>
+        </ul>
+
+        <figure>
+          <img
+            src="images/notas-musicales-pentagrama-clave-sol.jpg"
+            alt="Pentagrama con clave de sol y notas musicales en distintas posiciones"
+            title="Notas musicales en el pentagrama"
+            width="2048"
+            height="1360"
+            loading="lazy"
+          />
+
+          <figcaption>
+            Clave de sol y notas en el pentagrama. Imagen de
+            <a
+              href="https://commons.wikimedia.org/wiki/File:Clave_de_Sol_y_notas_en_Pentagrama.jpg"
+            >
+              Ankside, en Wikimedia Commons </a
+            >, bajo licencia
+            <a href="https://creativecommons.org/licenses/by-sa/3.0/">
+              CC BY-SA 3.0 </a
+            >. Sin modificaciones.
+          </figcaption>
+        </figure>
+
+        <aside aria-labelledby="consejo-clave">
+          <h3 id="consejo-clave">Fíjate primero en la clave</h3>
+          <p>
+            Una misma posición puede representar notas diferentes según la
+            clave. Los nombres del ejemplo anterior corresponden a la clave de
+            sol en segunda línea.
+          </p>
+        </aside>
+      </section>
+
+      <section id="figuras" aria-labelledby="titulo-figuras">
+        <h2 id="titulo-figuras">Figuras musicales y su valor</h2>
+
+        <p>
+          Las figuras musicales indican la duración de los sonidos. Una blanca
+          dura la mitad que una redonda, y una negra dura la mitad que una
+          blanca.
+        </p>
+
+        <p>
+          Para este primer ejemplo tomaremos la negra como un tiempo. Con esta
+          referencia podemos comparar las siguientes figuras:
+        </p>
+
+        <div class="table-wrapper">
+          <table>
+            <caption>
+              Duraciones tomando la negra como un tiempo
+            </caption>
+
+            <thead>
+              <tr>
+                <th scope="col">Figura</th>
+                <th scope="col">Duración</th>
+                <th scope="col">Equivalencia</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <th scope="row">Redonda</th>
+                <td>4 tiempos</td>
+                <td>2 blancas</td>
+              </tr>
+              <tr>
+                <th scope="row">Blanca</th>
+                <td>2 tiempos</td>
+                <td>2 negras</td>
+              </tr>
+              <tr>
+                <th scope="row">Negra</th>
+                <td>1 tiempo</td>
+                <td>2 corcheas</td>
+              </tr>
+              <tr>
+                <th scope="row">Corchea</th>
+                <td>1/2 tiempo</td>
+                <td>2 semicorcheas</td>
+              </tr>
+              <tr>
+                <th scope="row">Semicorchea</th>
+                <td>1/4 de tiempo</td>
+                <td>La mitad de una corchea</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>¿Qué son los silencios musicales?</h3>
+
+        <p>
+          Los silencios representan periodos durante los que no se toca una
+          nota. Cada figura tiene un silencio correspondiente con la misma
+          duración.
+        </p>
+
+        <p>
+          Por ejemplo, si la negra vale un tiempo, el silencio de negra también
+          dura un tiempo. Durante ese tiempo seguimos contando, aunque no
+          hagamos sonar una nota.
+        </p>
+
+        <h3>Practica con cuatro pulsaciones</h3>
+
+        <p>
+          Cuenta «uno, dos, tres, cuatro» a una velocidad regular. Da una
+          palmada en «uno» y en «tres». En «dos» y «cuatro», continúa contando
+          sin dar palmadas.
+        </p>
+
+        <h3>Vídeo de apoyo</h3>
+
+        <p>
+          Mira este vídeo para repasar las figuras musicales y sus duraciones.
+        </p>
+
+        <iframe
+          class="youtube-video"
+          src="https://www.youtube.com/embed/DWVfgbmjJlo"
+          title="Figuras musicales y sus silencios: explicación para principiantes"
+          loading="lazy"
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture;
+            web-share;
+          "
+          allowfullscreen
+        >
+        </iframe>
+        <p>
+          Fuente:
+          <a src="https://www.youtube.com/embed/DWVfgbmjJlo?si=tfDcGYkOREz3OPjs">
+            Ver el vídeo original en YouTube </a
+          >.
+        </p>
+
+        <aside aria-labelledby="consejo-duracion">
+          <h3 id="consejo-duracion">La referencia importa</h3>
+          <p>
+            En esta tabla la negra equivale a un tiempo. No significa que
+            siempre sea así: la unidad de tiempo depende del contexto rítmico.
+            Las proporciones entre las figuras se mantienen.
+          </p>
+        </aside>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        <a href="https://www.teoria.com/es/aprendizaje/lectura/">
+          Lectura musical en teoria.com
+        </a>
+      </p>
+    </footer>
+  </body>
+</html>
